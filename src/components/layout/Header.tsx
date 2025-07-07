@@ -45,6 +45,7 @@ export const Header: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className="backdrop-blur-lg bg-black/20 border-b border-white/10 px-6 py-4"
+      style={{ pointerEvents: 'auto', zIndex: 50 }}
     >
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         <HolographicText variant="h3" className="!text-2xl">
