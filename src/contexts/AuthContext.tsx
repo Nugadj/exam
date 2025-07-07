@@ -87,12 +87,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     return true;
   };
 
-  const logout = () => {
-    localStorage.removeItem('examUser');
-    setUser(null);
-    // Force page reload to clear all state
-    window.location.reload();
-  };
+ const logout = () => {
+  localStorage.removeItem('examUser');
+  setUser(null);
+  // Optionally, redirect to login page if using React Router
+  // navigate('/login');
+};
 
   const updateUser = (updates: Partial<User>) => {
     if (!user) return;
